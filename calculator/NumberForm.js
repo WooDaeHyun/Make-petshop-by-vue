@@ -15,7 +15,9 @@ export default function NumberForm({ $target, onInputX, onInputY }) {
 
   $xInput.addEventListener("keyup", (e) => {
     const { value } = e.target;
-    if (!isNaN(value)) {
+    if (value === "") {
+      onInputX(0);
+    } else {
       onInputX(value);
     }
   });
@@ -24,7 +26,9 @@ export default function NumberForm({ $target, onInputX, onInputY }) {
 
   $yInput.addEventListener("keyup", (e) => {
     const { value } = e.target;
-    if (!isNaN(value)) {
+    if (value === "") {
+      onInputY(0);
+    } else {
       onInputY(value);
     }
   });

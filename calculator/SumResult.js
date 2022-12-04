@@ -6,7 +6,7 @@ export default function SumResult({ $target, initialState }) {
   this.state = initialState;
 
   this.setState = (nextState) => {
-    console.log(this.state.x);
+    console.log(nextState.x);
     this.state = nextState;
     this.render();
   };
